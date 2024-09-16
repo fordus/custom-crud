@@ -52,7 +52,7 @@ export const useStore = create<Store>((set) => ({
             ...tab, 
             attributes: tab.attributes.filter(attr => attr.id !== attributeId),
             items: tab.items.map(item => {
-              const { [attributeId]: _, ...rest } = item
+              const { [attributeId]: _, ...rest } = item // eslint-disable-line
               return rest
             })
           }
